@@ -1,6 +1,8 @@
 Socialapp::Application.routes.draw do
+  devise_for :users
   resources :statuses
-
+  # Change root to the page with all the statuses
+  root to: 'statuses#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
